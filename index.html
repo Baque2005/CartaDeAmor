@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>My Love ❤️</title>
+  <link rel="stylesheet" href="./style.css">
+  <meta name="google-adsense-account" content="ca-pub-4704501585981299">
+</head>
+<body>
+  <div class="envelope">
+    <div class="envelope-inner">
+      <div class="envelope-front">
+        <div class="postage-stamp">
+          <!-- SVG del sello -->
+          <!-- Puedes insertar aquí el SVG que desees -->
+        </div>
+        <div class="address">
+          <p>
+            <span>Para:</span>
+            <span>La negrita</span>
+          </p>
+          <p>
+            <span>De:</span>
+            <span>Paquito</span>
+          </p>
+        </div>
+      </div>
+      <div class="envelope-back">
+        <div class="top-fold">
+          <!-- Imagen eliminada -->
+        </div>
+        <div class="letter" style="text-align: center; padding: 10px;">
+          <img src="https://i.ibb.co/kVQJsf7R/Imagen-de-Whats-App-2025-05-25-a-las-20-40-52-b90117b3.jpg" 
+               alt="Imagen personalizada" 
+               style="width: 100px; margin-bottom: 10px; border-radius: 10px;">
+          <p>
+            Cuanto más tiempo estoy contigo <span class="highlight">¡más te quiero!</span> Eres lo mejor y más bonito que llegó a mi vida, Jennifer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4704501585981299" crossorigin="anonymous"></script>
+
+  <audio id="audio" autoplay loop>
+    <source src="audio/tu-cancion.mp3" type="audio/mpeg">
+    Tu navegador no soporta la reproducción de audio.
+  </audio>
+  <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("audio");
+
+    // Para algunos navegadores, se necesita un gesto del usuario
+    // Esto fuerza la reproducción apenas el usuario haga clic en cualquier parte
+    const playAudio = () => {
+      audio.play().catch((e) => {
+        console.warn("El navegador bloqueó la reproducción automática:", e);
+      });
+      document.removeEventListener("click", playAudio);
+    };
+
+    // Intenta reproducir apenas cargue
+    audio.play().catch(() => {
+      // Si falla, espera a que el usuario haga clic en cualquier parte
+      document.addEventListener("click", playAudio);
+    });
+  });
+</script>
+</body>
+</html>
